@@ -1,6 +1,6 @@
 # MSK_ML_gamma
-#This file contains the code corresponding to the article "Machine Learning Workflows for Motion Capture-driven Biomechanical Modelling"
-#This work rigorously implements and critically evaluate the performance of various ML models for mapping optical motion capture inputs to musculoskeletal outputs.
+This file contains the code corresponding to the article "Machine Learning Workflows for Motion Capture-driven Biomechanical Modelling"
+This work rigorously implements and critically evaluate the performance of various ML models for mapping optical motion capture inputs to musculoskeletal outputs.
 
 #Code description
 #pytorch_utilities.py -- contains function for various models (Linear, Neural Network, RNN, LSTM, GRU,....) and generate a file with hyperparameters choices explored in this work. 
