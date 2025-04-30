@@ -12,13 +12,7 @@ Finally, this research provides first-ever checklist of best practices for ML re
 
 #Final analysis including all the plots used in main article and supplemental information are generated in main.ipynb. 
 
-#final trained NN model #Files are heavy to upload, can be downloaded from here: https://www.dropbox.com/sh/svuqdy597d6pg60/AACiWr-kVx_W0bU0AD3HWPNha?dl=0
-#Test data for reproducing the results are provided here,
-Input data --  https://www.dropbox.com/sh/8isp6yl29np6ngo/AAAqRWIc8lTOtYieehUSEQN1a?dl=0
-Output data -- https://www.dropbox.com/sh/7h1oncpyru9vupl/AACm0YPmlmdu2rlabUpynCW4a?dl=0
-
-
-#Test data for reproducing the results are provided here. The full training dataset can be obtained on request to V.HarthikoteNagaraja@salford.ac.uk
+Note that only test data is provided with the code, the full training dataset can be obtained on request to V.HarthikoteNagaraja@salford.ac.uk
 
 The ML techniques and data analysis were done using Python 3.12 (\href{https://www.python.org/}{https://www.python.org/}) and Keras 3.0 (\href{https://keras.io/}{https://keras.io/}). Add details on where the computing was done (technical details of SCITAS, EPFL) % RS to update these details and amend the sentence.
 
