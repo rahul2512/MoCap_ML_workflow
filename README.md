@@ -19,7 +19,7 @@ Finally, this research provides first-ever checklist of best practices for ML re
 - **Demo:** https://github.com/rahul2512/MoCap_ML_workflow/blob/main/main.ipynb
   
 ## Uses
-Research purpose only -- add more
+Research purpose only. The primary purpose of this work was systematic implement and critically evaluate the relevant ML techniques in MoCap driven MSK modelling. 
 
 ## Bias, Risks, and Limitations
 
