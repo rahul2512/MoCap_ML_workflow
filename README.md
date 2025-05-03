@@ -16,8 +16,8 @@ Finally, this research provides first-ever checklist of best practices for ML re
 
 - **Repository:** https://github.com/rahul2512/MoCap_ML_workflow
 - **Paper [optional]:** {{link to paper}}
-- **Demo [optional]:** {{ link to notebook}}
-
+- **Demo [optional]:** https://github.com/rahul2512/MoCap_ML_workflow/blob/main/main.ipynb
+  
 ## Uses
 Research purpose only -- add more
 
