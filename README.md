@@ -3,7 +3,8 @@
 
 ## Model Details
 This file contains the code corresponding to the article "Machine Learning Workflows for Motion Capture-driven Biomechanical Modelling". 
-This work rigorously implements and critically evaluate the performance of various popular ML models for mapping optical motion capture inputs to Biomechanical musculoskeletal outputs.
+This work rigorously implements and critically evaluate the performance of various popular ML models for mapping optical motion capture inputs to biomechanical musculoskeletal outputs.
+
 Finally, this research provides first-ever checklist of best practices for ML research in biomechanical modelling, the LearnABLE (Learning mAchines for BiomechanicaL modElling) checklist.
 
 ### Model Description
@@ -13,9 +14,7 @@ Finally, this research provides first-ever checklist of best practices for ML re
 
 ### Model Sources [optional]
 
-<!-- Provide the basic links for the model. -->
-
-- **Repository:** {{ link to github}}
+- **Repository:** {{https://github.com/rahul2512/MoCap_ML_workflow}}
 - **Paper [optional]:** {{link to paper}}
 - **Demo [optional]:** {{ link to notebook}}
 
