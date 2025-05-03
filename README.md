@@ -2,14 +2,11 @@
 
 
 ## Model Details
+This file contains the code corresponding to the article "Machine Learning Workflows for Motion Capture-driven Biomechanical Modelling". 
+This work rigorously implements and critically evaluate the performance of various popular ML models for mapping optical motion capture inputs to musculoskeletal outputs. 
+Finally, this research provides first-ever checklist of best practices for ML research in biomechanical modelling, the LearnABLE (Learning mAchines for BiomechanicaL modElling) checklist.
 
 ### Model Description
-
-This file contains the code corresponding to the article "Machine Learning Workflows for Motion Capture-driven Biomechanical Modelling" This work rigorously implements and critically evaluate the performance of various popular ML models for mapping optical motion capture inputs to musculoskeletal outputs. Finally, this research provides first-ever checklist of best practices for ML research in biomechanical modelling, the LearnABLE (Learning mAchines for BiomechanicaL modElling) checklist.
-
-
-{{ model_description | default("", true) }}
-
 - **Developed by:** {{Vikranth Harthikote Nagaraja, Rahul Sharma, Abhishek Dasgupta and Challenger Mishra}}
 - **Funded by [optional]:** {{This project made use of data originally collected for a previous study funded by the _Research Councils UK (RCUK) Digital Economy Programme grant number EP/G036861/1_ (Oxford Centre for Doctoral Training in Healthcare Innovation) and the _Wellcome Trust Affordable Healthcare in India Award (Grant number 103383/B/13/Z)_. CM's Fellowship is supported through the Accelerate Program for Scientific Discovery at the Computer Laboratory, University of Cambridge. We also acknowledge funding from the _Swiss National Science Foundation_ (grant number 200020 182184, supporting RS and Article Processing Charges) and the computational resources provided by _SCITAS, EPFL_.}}
 - **License:** {{ license | default("[More Information Needed]", true)}}
