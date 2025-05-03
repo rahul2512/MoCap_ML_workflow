@@ -31,6 +31,9 @@ pytorch.py -- several functions to handle data, perform cross-validation, train 
 
 ## Training Details
 The goal is to approximate MSK model by mapping MoCap inputs to biomechanical MSK outputs.
+The ML techniques and data analysis were done using Python 3.12 (\href{https://www.python.org/}{https://www.python.org/}) and Keras 3.0 (\href{https://keras.io/}{https://keras.io/}). Add details on where the computing was done (technical details of SCITAS, EPFL) % RS to update these details and amend the sentence.
+All the libraries and depedicies are in environment.yml and the conda environment can be recreated by running the following command:
+conda env create -f environment.yml
 
 ### Training Data
 Note that only test data is provided with the code, the full training dataset can be obtained on request to V.HarthikoteNagaraja@salford.ac.uk. 
@@ -91,62 +94,15 @@ Note that only test data is provided with the code, the full training dataset ca
 
 ## Model Examination [optional]
 
-<!-- Relevant interpretability work for the model goes here -->
-
 {{ model_examination | default("[More Information Needed]", true)}}
 
 ## Environmental Impact
-
-<!-- Total emissions (in grams of CO2eq) and additional considerations, such as electricity usage, go here. Edit the suggested text below accordingly -->
-
-Carbon emissions can be estimated using the [Machine Learning Impact calculator](https://mlco2.github.io/impact#compute) presented in [Lacoste et al. (2019)](https://arxiv.org/abs/1910.09700).
-
-- **Hardware Type:** {{ hardware_type | default("[More Information Needed]", true)}}
-- **Hours used:** {{ hours_used | default("[More Information Needed]", true)}}
-- **Cloud Provider:** {{ cloud_provider | default("[More Information Needed]", true)}}
-- **Compute Region:** {{ cloud_region | default("[More Information Needed]", true)}}
-- **Carbon Emitted:** {{ co2_emitted | default("[More Information Needed]", true)}}
-
-## Technical Specifications [optional]
-
-### Model Architecture and Objective
-
-{{ model_specs | default("[More Information Needed]", true)}}
+HPC clusters (JED cluster, SCITAS, EPFL, https://www.epfl.ch/research/facilities/scitas/jed/)  were used to run the complete cross-validation runs which are not feasible on a normap laptop. However, few instances, can be easily done using the function "specific" and "specific_CV" in pytorch.py, respectively. 
+The carbon footprint calculation is performed following the guidelines by SCITAS, EPFL (https://scitas-doc.epfl.ch/user-guide/co2-estimation/). 
+Specifically, we used the ‘JED’ cluster, which produces an emission of 1.02 grams of CO2 equivalent for every CPU core hour used. JED has 2.4 GHz Intel(R) Xeon(R) Platinum 8360Y processors.
 
 ### Compute Infrastructure
+Specifically, we used the ‘JED’ cluster, which has 2.4 GHz Intel(R) Xeon(R) Platinum 8360Y processors.
 
-{{ compute_infrastructure | default("[More Information Needed]", true)}}
-
-#### Hardware
-
-{{ hardware_requirements | default("[More Information Needed]", true)}}
-
-#### Software
-
-{{ software | default("[More Information Needed]", true)}}
-
-## Citation [optional]
-
-<!-- If there is a paper or blog post introducing the model, the APA and Bibtex information for that should go in this section. -->
-
-**BibTeX:**
-
-{{ citation_bibtex | default("[More Information Needed]", true)}}
-
-**APA:**
-
-{{ citation_apa | default("[More Information Needed]", true)}}
-
-
-
-
-
-#HPC clusters (JED cluster, SCITAS, EPFL, https://www.epfl.ch/research/facilities/scitas/jed/)  were used to run the complete cross-validation runs which are not feasible on a normap laptop. However, few instances, can be easily done using the function "specific" and "specific_CV" in pytorch.py, respectively.
 
 #Final analysis including all the plots used in main article and supplemental information are generated in main.ipynb. 
-
-
-The ML techniques and data analysis were done using Python 3.12 (\href{https://www.python.org/}{https://www.python.org/}) and Keras 3.0 (\href{https://keras.io/}{https://keras.io/}). Add details on where the computing was done (technical details of SCITAS, EPFL) % RS to update these details and amend the sentence.
-
-All the libraries and depedicies are in environment.yml and the conda environment can be recreated by running the following command:
-conda env create -f environment.yml
