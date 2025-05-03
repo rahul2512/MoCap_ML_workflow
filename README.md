@@ -47,7 +47,6 @@ Note that only test data is provided with the code, the full training dataset ca
 #### Training Hyperparameters
 - **Training regime:** {{ training_regime | default("[More Information Needed]", true)}} <!--fp32, fp16 mixed precision, bf16 mixed precision, bf16 non-mixed precision, fp16 non-mixed precision, fp8 mixed precision -->
 
-
 ## Evaluation
 
 ### Testing Data, Factors & Metrics
