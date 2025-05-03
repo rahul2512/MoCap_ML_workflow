@@ -21,24 +21,20 @@ Finally, this research provides first-ever checklist of best practices for ML re
 ## Uses
 Research purpose only. The primary purpose of this work was systematic implement and critically evaluate the relevant ML techniques in MoCap driven MSK modelling. 
 
-## Bias, Risks, and Limitations
-
-
 ### Recommendations
-
-LearnAble
+LearnAble checklist 
 
 ## How to Get Started with the Model
-
-Use the code below to get started with the model.
-
-{{ get_started_code | default("[More Information Needed]", true)}}
+pytorch_utilities.py -- contains function for various models (Linear, Neural Network, RNN, LSTM, GRU,....) and generate a file with hyperparameters choices explored in this work. 
+read_in_out.py -- contains classes to read input and output data and some other classes for handling the final trained models. 
+pytorch.py -- several functions to handle data, perform cross-validation, train model, forward pass, plot and analyse results, plot outputs
 
 ## Training Details
+The goal is to approximate MSK model by mapping MoCap inputs to biomechanical MSK outputs.
 
 ### Training Data
+Note that only test data is provided with the code, the full training dataset can be obtained on request to V.HarthikoteNagaraja@salford.ac.uk. 
 
-<!-- This should link to a Dataset Card, perhaps with a short stub of information on what the training data is all about as well as documentation related to data pre-processing or additional filtering. -->
 
 {{ training_data | default("[More Information Needed]", true)}}
 
@@ -143,20 +139,12 @@ Carbon emissions can be estimated using the [Machine Learning Impact calculator]
 
 
 
-This file contains the code corresponding to the article "Machine Learning Workflows for Motion Capture-driven Biomechanical Modelling"
-This work rigorously implements and critically evaluate the performance of various popular ML models for mapping optical motion capture inputs to musculoskeletal outputs.
-Finally, this research provides first-ever checklist of best practices for ML research in biomechanical modelling, the LearnABLE (Learning mAchines for BiomechanicaL modElling) checklist.
 
-#Code description
-#pytorch_utilities.py -- contains function for various models (Linear, Neural Network, RNN, LSTM, GRU,....) and generate a file with hyperparameters choices explored in this work. 
-#read_in_out.py -- contains classes to read input and output data and some other classes for handling the final trained models. 
-#pytorch.py -- several functions to handle data, perform cross-validation, train model, forward pass, plot and analyse results, plot outputs
 
 #HPC clusters (JED cluster, SCITAS, EPFL, https://www.epfl.ch/research/facilities/scitas/jed/)  were used to run the complete cross-validation runs which are not feasible on a normap laptop. However, few instances, can be easily done using the function "specific" and "specific_CV" in pytorch.py, respectively.
 
 #Final analysis including all the plots used in main article and supplemental information are generated in main.ipynb. 
 
-Note that only test data is provided with the code, the full training dataset can be obtained on request to V.HarthikoteNagaraja@salford.ac.uk
 
 The ML techniques and data analysis were done using Python 3.12 (\href{https://www.python.org/}{https://www.python.org/}) and Keras 3.0 (\href{https://keras.io/}{https://keras.io/}). Add details on where the computing was done (technical details of SCITAS, EPFL) % RS to update these details and amend the sentence.
 
