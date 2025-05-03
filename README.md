@@ -50,14 +50,9 @@ Testing data is OMC-driven MSK model biomechanical outputs. Details are in Metho
 #### Metrics
 Primary error metric: RMSE and NRMSE and Secondary error metric: pearson correlation
 
-### Results
-{{ results | default("[More Information Needed]", true)}}
-
-#### Summary
-{{ results_summary | default("", true) }}
-
-## Model Examination [optional]
-{{ model_examination | default("[More Information Needed]", true)}}
+## Model Examination
+The various aspects of ML implementation are critically evaluated for various aspects including robustness to added noise, transferability, and explainability.
+Final analysis including all the plots used in main article and supplemental information are generated in main.ipynb. 
 
 ## Environmental Impact
 HPC clusters (JED cluster, SCITAS, EPFL, https://www.epfl.ch/research/facilities/scitas/jed/)  were used to run the complete cross-validation runs which are not feasible on a normap laptop. However, few instances, can be easily done using the function "specific" and "specific_CV" in pytorch.py, respectively. 
@@ -67,5 +62,3 @@ Specifically, we used the ‘JED’ cluster, which produces an emission of 1.02 
 ### Compute Infrastructure
 Specifically, we used the ‘JED’ cluster, which has 2.4 GHz Intel(R) Xeon(R) Platinum 8360Y processors.
 
-
-#Final analysis including all the plots used in main article and supplemental information are generated in main.ipynb. 
