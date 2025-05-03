@@ -36,19 +36,14 @@ All the libraries and depedicies are in environment.yml and the conda environmen
 conda env create -f environment.yml
 
 ### Training Data
-Note that only test data is provided with the code, the full training dataset can be obtained on request to V.HarthikoteNagaraja@salford.ac.uk. 
+Note that only test data is provided with the code, the full training dataset can be obtained on request to V.HarthikoteNagaraja@salford.ac.uk.
 
-
-{{ training_data | default("[More Information Needed]", true)}}
 
 ### Training Procedure
-
 <!-- This relates heavily to the Technical Specifications. Content here should link to that section when it is relevant to the training procedure. -->
 
-#### Preprocessing [optional]
-
+#### Preprocessing
 {{ preprocessing | default("[More Information Needed]", true)}}
-
 
 #### Training Hyperparameters
 - **Training regime:** {{ training_regime | default("[More Information Needed]", true)}} <!--fp32, fp16 mixed precision, bf16 mixed precision, bf16 non-mixed precision, fp16 non-mixed precision, fp8 mixed precision -->
