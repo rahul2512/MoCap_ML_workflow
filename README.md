@@ -51,49 +51,29 @@ Note that only test data is provided with the code, the full training dataset ca
 
 
 #### Training Hyperparameters
-
 - **Training regime:** {{ training_regime | default("[More Information Needed]", true)}} <!--fp32, fp16 mixed precision, bf16 mixed precision, bf16 non-mixed precision, fp16 non-mixed precision, fp8 mixed precision -->
 
-#### Speeds, Sizes, Times [optional]
-
-<!-- This section provides information about throughput, start/end time, checkpoint size if relevant, etc. -->
-
-{{ speeds_sizes_times | default("[More Information Needed]", true)}}
 
 ## Evaluation
-
-<!-- This section describes the evaluation protocols and provides the results. -->
 
 ### Testing Data, Factors & Metrics
 
 #### Testing Data
-
-<!-- This should link to a Dataset Card if possible. -->
-
 {{ testing_data | default("[More Information Needed]", true)}}
 
 #### Factors
-
-<!-- These are the things the evaluation is disaggregating by, e.g., subpopulations or domains. -->
-
 {{ testing_factors | default("[More Information Needed]", true)}}
 
 #### Metrics
-
-<!-- These are the evaluation metrics being used, ideally with a description of why. -->
-
 {{ testing_metrics | default("[More Information Needed]", true)}}
 
 ### Results
-
 {{ results | default("[More Information Needed]", true)}}
 
 #### Summary
-
 {{ results_summary | default("", true) }}
 
 ## Model Examination [optional]
-
 {{ model_examination | default("[More Information Needed]", true)}}
 
 ## Environmental Impact
