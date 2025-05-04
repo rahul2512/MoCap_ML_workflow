@@ -41,7 +41,7 @@ Note that only test data is provided with the code, the full training dataset ca
 The preprocessing steps are detailed in the paper. 
 
 #### Training Hyperparameters
-- **Training regime:** {{ training_regime | default("[More Information Needed]", true)}} <!--fp32, fp16 mixed precision, bf16 mixed precision, bf16 non-mixed precision, fp16 non-mixed precision, fp8 mixed precision -->
+- **Training regime:** For each model, we have performed grid-search. Details in https://github.com/rahul2512/MoCap_ML_workflow/tree/main/hyperparameters
 
 ## Evaluation
 #### Testing Data
