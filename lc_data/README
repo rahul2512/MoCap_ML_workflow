@@ -1,0 +1,5 @@
+# learning curve data 
+# code to reproduce this data is in main python notebook
+# For each model, we have created learning curve by first training the model
+# 10, 30, and 50% on one sample data and then 1-13 samples.
+# For each case, we have done 10 independent runs either choosing different samples or random initial message, 
