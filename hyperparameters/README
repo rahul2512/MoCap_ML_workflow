@@ -1,1 +1,2 @@
 Grid search parameters
+For ConvLSTM, the same hyperparameters specified in hyperparam_CNN.txt are used.
