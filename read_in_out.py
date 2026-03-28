@@ -646,7 +646,7 @@ def continuous_noise(t):
     l = np.shape(t)[0]
     ### need to pick a maximum values for A, w, Phi  
     A = 10
-    w = 2*np.pi*6   ## 6Hz 
+    w = 2*np.pi*4   ## 4Hz 
     phi = 2*np.pi
     tmpA = A*np.random.rand(l)
     tmpw = w*np.random.rand(l)
