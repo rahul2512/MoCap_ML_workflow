@@ -642,10 +642,39 @@ class ML_analysis:
 # Functions to adding noise into the data
 #################################################
 #################################################
-def continuous_noise(t):
+### pelvis 15, 25, 2pi
+## Thorax 10, 25, 2pi
+## Arm  10, 25, 2pi
+## forearm 10, 25, 2pi
+## Hand 5, 25, 2pi
+# https://www.sciencedirect.com/science/article/pii/S0021929025006311
+
+markers_list =['C7','T10','CLAV',
+               'STRN','RBAK','LSHO',
+               'RSHO','RUPA','RELB',
+               'RFRM','RWRA','RWRB',
+               'RFIN','RASI','LPSI','RPSI',
+               'D1','D2','D3']
+
+markers_A = [10, 10, 10,
+             10, 10, 10,
+             10, 10, 10,
+             10, 10, 10,
+             5, 15, 15, 15,
+             0, 0, 0 ]
+
+def split_array_to_3d(a):
+    a = np.asarray(a)
+    N = len(a)
+    directions = np.random.randn(N, 3)
+    directions /= np.linalg.norm(directions, axis=1, keepdims=True)    
+    out = directions * a[:, None]
+    return out
+
+def continuous_noise(t, marker_index):
     l = np.shape(t)[0]
     ### need to pick a maximum values for A, w, Phi  
-    A = 10
+    A = markers_A[marker_index]
     w = 2*np.pi*4   ## 4Hz 
     phi = 2*np.pi
     tmpA = A*np.random.rand(l)
@@ -659,14 +688,17 @@ def add_noise_to_trial(T_in):
     T = copy.deepcopy(T_in)
     time_col = T.columns[-1]
     samples = T.shape[0]
-    OMC_noise = np.random.normal(0, 2.89, samples) #https://www.sciencedirect.com/science/article/pii/S0966636204000682  ## 1-5 mm
-    for col in T.columns[:-1]:
-        cn = continuous_noise(T[time_col])
-        offset = np.random.normal(0, 2, 1) #https://www.mdpi.com/2075-1729/12/6/819#B15-life-12-00819
-        T[col] = T[col] + cn + np.full(samples, offset) + OMC_noise
-        # plt.plot(cn)
-        # plt.show()
-        # plt.close()
+    OMC_noise = np.random.normal(0, 2.89, (samples,3)) #https://www.sciencedirect.com/science/article/pii/S0966636204000682  ## 1-5 mm
+    for enum, col in enumerate(T.columns[:-1]):
+        if enum%3==0:
+            marker_index = enum//3
+            cn = continuous_noise(T[time_col], marker_index)
+            cn = split_array_to_3d(cn)
+            offset = np.random.normal(0, 2,  (samples,3)) #https://www.mdpi.com/2075-1729/12/6/819#B15-life-12-00819
+            T.iloc[:, col:col+3] = T.iloc[:, col:col+3] + cn + offset + OMC_noise
+            # plt.plot(cn)
+            # plt.show()
+            # plt.close()
     return T
 
 def add_noise_to_trial_windows(T_in):
@@ -675,10 +707,13 @@ def add_noise_to_trial_windows(T_in):
     samples = T.shape[0]
     windows = T.shape[1]
     ncols = T.shape[2]
-    OMC_noise = np.random.normal(0, 2.89, samples) #https://www.sciencedirect.com/science/article/pii/S0966636204000682  ## 1-5 mm
-    for col in np.arange(ncols-1):  ## last is time col
+    OMC_noise = np.random.normal(0, 2.89, (samples,3)) #https://www.sciencedirect.com/science/article/pii/S0966636204000682  ## 1-5 mm
+    for enum,col in enumerate(np.arange(ncols-1)):  ## last is time col
         for w in np.arange(windows):
-            cn = continuous_noise(time_col)
-            offset = np.random.normal(0, 2, 1) #https://www.mdpi.com/2075-1729/12/6/819#B15-life-12-00819
-            T[:,w,col] = T[:,w,col] + cn + np.full(samples, offset) + OMC_noise
+            if enum%3==0:
+                marker_index = enum//3
+                cn = continuous_noise(time_col, marker_index)
+                cn = split_array_to_3d(cn)
+                offset = np.random.normal(0, 2,  (samples,3))  #https://www.mdpi.com/2075-1729/12/6/819#B15-life-12-00819
+                T[:,w,col:col+3] = T[:,w,col:col+3] + cn +  offset + OMC_noise
     return T
